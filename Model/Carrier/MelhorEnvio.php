@@ -134,7 +134,6 @@ class MelhorEnvio extends AbstractCarrier implements CarrierInterface
                 $carriers = $shippingCalculate->getAvailableServices();
                 $this->setRatesOnSession($postData, $carriers);
             }
-
         } catch (LocalizedException $e) {
             $this->_logger->error($e->getMessage());
         }
